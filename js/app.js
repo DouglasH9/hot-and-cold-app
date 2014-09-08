@@ -16,11 +16,11 @@ $(document).ready(function(){
   	var numEnter = $('input[name = userGuess]').val();
 
   	//prepends userGuess to 
-  	$('#text').keypress(function(event){
+  	$('#userGuess').keypress(function(event){
 
   		if(event.which ==13) {
 
-  		console.log("enter was pressed");
+  		console.log("enter was pressed")
   		}
   	})
 });
