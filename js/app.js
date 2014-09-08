@@ -20,7 +20,7 @@ $(document).ready(function(){
 
   		if(event.which ==13) {
 
-  		console.log("enter was pressed")
+  		console.log("enter was pressed");
   		}
   	})
 });
