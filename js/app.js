@@ -12,6 +12,17 @@ $(document).ready(function(){
   		$(".overlay").fadeOut(1000);
   	});
 
+  	//gets number guessed by user
+  	var numEnter = $('input[name = userGuess]').val();
+
+  	//prepends userGuess to 
+  	$('#text').keypress(function(event){
+
+  		if(event.which ==13) {
+
+  		console.log("enter was pressed");
+  		}
+  	})
 });
 
 
