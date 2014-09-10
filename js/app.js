@@ -14,6 +14,8 @@ $(document).ready(function(){
 
 
 
+
+
 	var compareNumbers = function(){
 
 		//gets userGuess value
@@ -71,21 +73,24 @@ $(document).ready(function(){
 	$('#userGuess').keypress(function(event){
 		if (event.which == 13){
 
+			event.preventDefault();
 			compareNumbers();
 			var userGuess = $('#userGuess').val();
 			guessList.prepend('<li>'+ userGuess +'</li>');
-			userGuess.val('');		
-
+			userGuess.val('');
 		};
+
 	});
 
 	//runs number through compare function when guessButton is clicked
-	$('#guessButton').click(function(){
+	$('#guessButton').click(function(event){
 		
+		event.preventDefault();
 		compareNumbers();
 		var userGuess = $('#userGuess').val();
 		guessList.prepend('<li>' + userGuess + '</li>');
 		userGuess.val('');
+		
 
 	});
 
