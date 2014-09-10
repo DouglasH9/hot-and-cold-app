@@ -65,11 +65,11 @@ $(document).ready(function(){
 
 			}
 			else if ((compareVal <= 15)&&(compareVal > 8)){
-				feedback.text('Starting to get pretty hot in here');
+				feedback.text('Starting to get pretty toasty in here');
 
 				}			
 			else if ((compareVal <= 8)&&(compareVal > 3)){
-				feedback.text('So hot!!!');	
+				feedback.text('So h4wt! I\'m gonna go put on a speedo');	
 
 			}
 			else if (compareVal <= 3){
