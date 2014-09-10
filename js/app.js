@@ -68,7 +68,7 @@ $(document).ready(function(){
 				feedback.text('Starting to get pretty hot in here');
 
 				}			
-			else if ((compareVal <= 5)&&(compareVal > 3)){
+			else if ((compareVal <= 8)&&(compareVal > 3)){
 				feedback.text('So hot!!!');	
 
 			}
