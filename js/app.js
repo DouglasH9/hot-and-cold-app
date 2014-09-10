@@ -73,14 +73,14 @@ $(document).ready(function(){
 			var userGuess = $('#userGuess').val();
 			compareNumbers();
 			guessList.prepend('<li>'+ userGuess +'</li>');
-			$('#userguess').val('');
-			
-				
+			userGuess.val('');		
+
 		};
 	});
 
 	//runs number through compare function when guessButton is clicked
 	$('#guessButton').click(function(){
+		
 		var userGuess = $('#userGuess').val();
 		compareNumbers();
 		guessList.prepend('<li>' + userGuess + '</li>');
