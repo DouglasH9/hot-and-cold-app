@@ -12,9 +12,15 @@ $(document).ready(function(){
 	//ditto for guessList
 	var guessList = $('#guessList');
 
+	//if player wins will disable input so they have to start new game
+	var youWon = function() {
+		$('#userGuess').attr('disabled','disabled');
+	};
 
+	var newGame = function() {
+		computerNum = Math.floor(1+Math.random()*100);
 
-
+	}
 
 	var compareNumbers = function(){
 
@@ -27,7 +33,8 @@ $(document).ready(function(){
 		//runs computerNum and userGuess through comparison
 		if ((userGuess%1==0)&&(userGuess>=0)&&(userGuess<=100)){
 			if (userGuess==computerNum){
-				feedback.text('Great Job! You guessed it!');
+				feedback.text('Great Job! You guessed it! Click "New Game" to play again!');
+				youWon();
 			}
 			else if (compareVal >50){
 				feedback.text('Whoa! You\'re super duper cold! Kanye\'s chain isn\'t even that icy!');
@@ -42,7 +49,7 @@ $(document).ready(function(){
 				
 			}
 			else if ((compareVal <= 30)&&(compareVal > 20)){
-				feedback.text('Kinda warm in here. Spring is coming');
+				feedback.text('Kinda warm in here. Spring is coming.');
 				
 			}
 			else if ((compareVal <= 25)&&(compareVal > 15)){
@@ -77,7 +84,8 @@ $(document).ready(function(){
 			compareNumbers();
 			var userGuess = $('#userGuess').val();
 			guessList.prepend('<li>'+ userGuess +'</li>');
-			userGuess.val('');
+			$('#userGuess').val('');
+
 		};
 
 	});
@@ -89,7 +97,7 @@ $(document).ready(function(){
 		compareNumbers();
 		var userGuess = $('#userGuess').val();
 		guessList.prepend('<li>' + userGuess + '</li>');
-		userGuess.val('');
+		$('#userGuess').val('');
 		
 
 	});
