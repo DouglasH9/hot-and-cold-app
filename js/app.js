@@ -54,7 +54,7 @@ $(document).ready(function(){
 				feedback.text('So hot!!!');	
 
 			}
-			else if (compareVal < 3){
+			else if (compareVal <= 3){
 				feedback.text('GOD HELP ME! LET ME OUT OF THIS CYBER PRISON BEFORE I BURN ALIVE!');
 			}
 
