@@ -12,14 +12,22 @@ $(document).ready(function(){
 	//ditto for guessList
 	var guessList = $('#guessList');
 
+	//starts guessCount at 0
+	var guessCount = 1;
+
 	//if player wins will disable input so they have to start new game
 	var youWon = function() {
 		$('#userGuess').attr('disabled','disabled');
 	};
 
+	//resets the game
 	var newGame = function() {
 		computerNum = Math.floor(1+Math.random()*100);
-
+		guessList.empty();
+		guessCount = 0;
+		$('#userGuess').removeAttr('disabled','disabled');
+		feedback.text('Make your guess!');
+		$('#count').text(0);
 	}
 
 	var compareNumbers = function(){
@@ -85,6 +93,8 @@ $(document).ready(function(){
 			var userGuess = $('#userGuess').val();
 			guessList.prepend('<li>'+ userGuess +'</li>');
 			$('#userGuess').val('');
+			$('#count').text(guessCount);
+			guessCount++
 
 		};
 
@@ -98,8 +108,15 @@ $(document).ready(function(){
 		var userGuess = $('#userGuess').val();
 		guessList.prepend('<li>' + userGuess + '</li>');
 		$('#userGuess').val('');
+		$('#count').text(guessCount);
+		guessCount++;
 		
 
+	});
+
+	//starts new game if "new game is clicked"
+	$('.new').click(function(){
+		newGame();
 	});
 
 	/*--- Display information modal box ---*/
