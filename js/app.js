@@ -70,8 +70,8 @@ $(document).ready(function(){
 	$('#userGuess').keypress(function(event){
 		if (event.which == 13){
 
-			var userGuess = $('#userGuess').val();
 			compareNumbers();
+			var userGuess = $('#userGuess').val();
 			guessList.prepend('<li>'+ userGuess +'</li>');
 			userGuess.val('');		
 
@@ -81,8 +81,8 @@ $(document).ready(function(){
 	//runs number through compare function when guessButton is clicked
 	$('#guessButton').click(function(){
 		
-		var userGuess = $('#userGuess').val();
 		compareNumbers();
+		var userGuess = $('#userGuess').val();
 		guessList.prepend('<li>' + userGuess + '</li>');
 		userGuess.val('');
 
