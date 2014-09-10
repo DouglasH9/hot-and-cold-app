@@ -53,7 +53,7 @@ $(document).ready(function(){
 				
 			}
 			else if ((compareVal <=40)&&(compareVal>30)){
-				feedback.text('It\'s pretty chilly in here. Maybe you should wear a light jacket.');
+				feedback.text('It\'s pretty chilly in here. Maybe I should put on a light jacket.');
 				
 			}
 			else if ((compareVal <= 30)&&(compareVal > 20)){
