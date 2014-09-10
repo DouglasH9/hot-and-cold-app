@@ -60,7 +60,7 @@ $(document).ready(function(){
 				feedback.text('Kinda warm in here. Spring is coming.');
 				
 			}
-			else if ((compareVal <= 25)&&(compareVal > 15)){
+			else if ((compareVal <= 20)&&(compareVal > 15)){
 				feedback.text('Yay! Spring!.');
 
 			}
