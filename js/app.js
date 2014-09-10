@@ -57,7 +57,7 @@ $(document).ready(function(){
 				
 			}
 			else if ((compareVal <= 30)&&(compareVal > 20)){
-				feedback.text('Kinda warm in here. Spring is coming.');
+				feedback.text('Kinda warm in here. Spring is coming. Or is that Winter?');
 				
 			}
 			else if ((compareVal <= 20)&&(compareVal > 15)){
@@ -65,11 +65,11 @@ $(document).ready(function(){
 
 			}
 			else if ((compareVal <= 15)&&(compareVal > 8)){
-				feedback.text('Starting to get pretty toasty in here');
+				feedback.text('Starting to get pretty toasty in here.');
 
 				}			
 			else if ((compareVal <= 8)&&(compareVal > 3)){
-				feedback.text('So h4wt! I\'m gonna go put on a speedo');	
+				feedback.text('So h4wt! I\'m gonna go put on a speedo...');	
 
 			}
 			else if (compareVal <= 3){
