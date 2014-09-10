@@ -7,8 +7,8 @@ $(document).ready(function(){
 	console.log (computerNum);
 
 	//sets initial state of userGuess.val to NaN
-	$('#userGuess').val(Nan);
-	
+	$('#userGuess').val(NaN);
+
 	//turns feedback box to jquery object so i don't have to type all the $('#blahbhlahblah') nonsense
 	var feedback = $('#feedback');
 
@@ -31,6 +31,7 @@ $(document).ready(function(){
 		$('#userGuess').removeAttr('disabled','disabled');
 		feedback.text('Make your guess!');
 		$('#count').text(0);
+		$('#userGuess').val(NaN);
 	}
 
 	var compareNumbers = function(){
