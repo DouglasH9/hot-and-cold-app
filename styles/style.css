@@ -277,7 +277,7 @@ input.text {
 }
 
 input:focus {
-	outline: none !important;
+	outline: none;
 }
 
 ::-webkit-input-placeholder {
