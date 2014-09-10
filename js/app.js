@@ -2,6 +2,7 @@
 
 $(document).ready(function(){
 	
+	//generates random number 
 	var computerNum = Math.floor(1+Math.random()*100);
 	console.log (computerNum);
 
