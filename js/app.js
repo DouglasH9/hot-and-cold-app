@@ -13,7 +13,7 @@ $(document).ready(function(){
 	var guessList = $('#guessList');
 
 	//starts guessCount at 0
-	var guessCount = 0;
+	var guessCount = 1;
 
 	//if player wins will disable input so they have to start new game
 	var youWon = function() {
