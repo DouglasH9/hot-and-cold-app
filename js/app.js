@@ -6,6 +6,9 @@ $(document).ready(function(){
 	var computerNum = Math.floor(1+Math.random()*100);
 	console.log (computerNum);
 
+	//sets initial state of userGuess.val to NaN
+	$('#userGuess').val(Nan);
+	
 	//turns feedback box to jquery object so i don't have to type all the $('#blahbhlahblah') nonsense
 	var feedback = $('#feedback');
 
