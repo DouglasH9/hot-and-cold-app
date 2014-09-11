@@ -18,6 +18,7 @@ $(document).ready(function(){
 	//if player wins will disable input so they have to start new game
 	var youWon = function() {
 		$('#userGuess').attr('disabled','disabled');
+		$('#guessButton').attr('disabled', 'disabled');
 	};
 
 	//resets the game
@@ -26,16 +27,18 @@ $(document).ready(function(){
 		guessList.empty();
 		guessCount = 0;
 		$('#userGuess').removeAttr('disabled','disabled');
+		$('#guessButton').removeAttr('disabled', 'disabled');
 		feedback.text('Make your guess!');
 		$('#count').text(0);
 	}
 
+	//compares the user guess to the computer number
 	var compareNumbers = function(){
 
 		//gets userGuess value
 		var userGuess = $('#userGuess').val();
 
-		//gets absolute value of userGuess and computerNum
+		//gets absolute value of differece of userGuess and computerNum
 		var compareVal = Math.abs(computerNum-userGuess);
 		
 		//runs computerNum and userGuess through comparison
@@ -91,11 +94,19 @@ $(document).ready(function(){
 			event.preventDefault();
 			compareNumbers();
 			var userGuess = $('#userGuess').val();
-			guessList.prepend('<li>'+ userGuess +'</li>');
-			$('#userGuess').val('');
-			$('#count').text(guessCount);
-			guessCount++
 
+			var results = function(){
+				if (userGuess!==('')){
+					guessList.prepend('<li>'+ userGuess +'</li>');
+					$('#userGuess').val('');
+					$('#count').text(guessCount);
+					guessCount++;
+				}
+				else {
+					feedback.text('Enter a number bozo!');
+				}
+			}
+			results();
 		};
 
 	});
@@ -106,10 +117,19 @@ $(document).ready(function(){
 		event.preventDefault();
 		compareNumbers();
 		var userGuess = $('#userGuess').val();
-		guessList.prepend('<li>' + userGuess + '</li>');
-		$('#userGuess').val('');
-		$('#count').text(guessCount);
-		guessCount++;
+
+		var results = function(){
+			if (userGuess!==('')){
+				guessList.prepend('<li>'+ userGuess +'</li>');
+				$('#userGuess').val('');
+				$('#count').text(guessCount);
+				guessCount++;
+			}
+			else {
+				feedback.text('Enter a number bozo!');
+			}
+		}
+		results();
 		
 
 	});
