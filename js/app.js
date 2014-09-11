@@ -44,7 +44,7 @@ $(document).ready(function(){
 		//runs computerNum and userGuess through comparison
 		if ((userGuess%1==0)&&(userGuess>=0)&&(userGuess<=100)&&(userGuess!==(''))){
 			if (userGuess==computerNum){
-				feedback.text('Great Job! You guessed it! Click "New Game" to play again!');
+				feedback.text('You guessed it! You\'re more than just a pretty face after all! Click "New Game" to play again!');
 				youWon();
 			}
 			else if (compareVal <=4){
