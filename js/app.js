@@ -98,6 +98,7 @@ $(document).ready(function(){
 			compareNumbers();
 			var userGuess = $('#userGuess').val();
 
+			//evaluates result and prepends userGuess only if whole number entered
 			var results = function(){
 				if (userGuess!==('')){
 					guessList.prepend('<li>'+ userGuess +'</li>');
@@ -108,6 +109,7 @@ $(document).ready(function(){
 				else {
 					feedback.text('Enter a number bozo!');
 				}
+
 			}
 			results();
 		};
@@ -121,6 +123,7 @@ $(document).ready(function(){
 		compareNumbers();
 		var userGuess = $('#userGuess').val();
 
+		//evaluates result and prepends userGuess only if whole number entered
 		var results = function(){
 			if (userGuess!==('')){
 				guessList.prepend('<li>'+ userGuess +'</li>');
@@ -133,7 +136,6 @@ $(document).ready(function(){
 			}
 		}
 		results();
-		
 
 	});
 
