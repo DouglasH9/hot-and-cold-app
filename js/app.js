@@ -30,7 +30,8 @@ $(document).ready(function(){
 		$('#guessButton').removeAttr('disabled', 'disabled');
 		feedback.text('Make your guess!');
 		$('#count').text(0);
-	}
+	};
+
 
 	//compares the user guess to the computer number
 	var compareNumbers = function(){
@@ -42,11 +43,17 @@ $(document).ready(function(){
 		var compareVal = Math.abs(computerNum-userGuess);
 		
 		//runs computerNum and userGuess through comparison
-		if ((userGuess%1==0)&&(userGuess>=0)&&(userGuess<=100)&&(userGuess!==(''))){
-			if (userGuess==computerNum){
+		if (userGuess==computerNum){
 				feedback.text('You guessed it! You\'re more than just a pretty face after all! Click "New Game" to play again!');
 				youWon();
 			}
+
+			else if ((userGuess%1!==0)||(userGuess<=0||userGuess>100||userGuess==(''))) {
+
+				feedback.text('Enter a whole number between 1 and 100, bozo!');
+				
+			}
+				
 			else if (compareVal <=4){
 				feedback.text('GOD HELP ME! LET ME OUT OF THIS CYBER PRISON BEFORE I BURN ALIVE!!!');
 			}
@@ -57,7 +64,7 @@ $(document).ready(function(){
 			else if (compareVal <= 10){
 				feedback.text('Starting to get pretty toasty in here.');
 
-				}
+			}
 			else if (compareVal <= 18){
 				feedback.text('Yay! Spring!.');
 
@@ -78,17 +85,15 @@ $(document).ready(function(){
 				feedback.text('Whoa! You\'re super duper cold! Kanye\'s chain isn\'t even that icy!');
 				
 			}
-			else if (compareVal > 50){
-				feedback.text('This is what scientists refer to as absolute zero, buddy.')
-			}
+				else {
+					feedback.text('This is what scientists refer to as absolute zero, buddy.');
+				}
 			
-		}
-		else {
-			feedback.text('Enter a whole number between 1 and 100, bozo!');
-		}
-		console.log(compareVal);
+			console.log(compareVal);
 		
+			
 	};
+		
 	
 	//runs number through compare function if enter is pressed
 	$('#userGuess').keypress(function(event){
